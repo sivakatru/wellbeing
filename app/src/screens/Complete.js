@@ -5,21 +5,11 @@ import Header from "../components/Header";
 import Button from "../components/Button";
 import { ActivityIndicator, View, Text, ScrollView } from "react-native";
 
-import { BarChart, PieChart } from "react-native-gifted-charts";
 
 export default function Complete({ navigation }) {
   const [showData, setShowData] = useState(false);
   const [data, setData] = useState({});
   const [isLoading, setLoading] = useState(true);
-  // const barData = [
-  //   { value: 850, label: "M" },
-  //   { value: 1500, label: "T", frontColor: "#560CCE" },
-  //   { value: 1745, label: "W", frontColor: "#560CCE" },
-  //   { value: 1320, label: "T" },
-  //   { value: 600, label: "F" },
-  //   { value: 2156, label: "S", frontColor: "#560CCE" },
-  //   { value: 900, label: "S" },
-  // ];
 
   useEffect(() => {
     setTimeout(function () {
@@ -148,24 +138,7 @@ export default function Complete({ navigation }) {
             <Paragraph style={{ fontWeight: "bold" }}>
               Total spendings: ₹{data["total_amount"].toFixed(1)}
             </Paragraph>
-            {/* <BarChart
-              barWidth={15}
-              noOfSections={3}
-              barBorderRadius={4}
-              frontColor="lightgray"
-              data={barData}
-              yAxisThickness={0}
-              xAxisThickness={0}
-            /> */}
-            <PieChart
-              donut
-              showText
-              textColor="white"
-              innerRadius={8}
-              showTextBackground
-              textBackgroundRadius={1}
-              data={data["pie_data"]}
-            />
+
             <Button
               mode="outlined"
               onPress={() =>

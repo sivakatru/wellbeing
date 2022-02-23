@@ -11,13 +11,15 @@ import WebView from "react-native-webview";
 
 export default function Dashboard({ navigation, route }) {
   const webviewRef = useRef(null);
-  const redirect_url = "<URL_OF_EXPRESS_APP>/redirect/";
+  const redirect_url = "http://localhost:5000/redirect/";
 
   const onNavigation = (navState) => {
     if (navState.url.includes(redirect_url)) {
       navigation.navigate("Complete");
     }
   };
+
+  console.log(route.params.param);
 
   return (
     <>

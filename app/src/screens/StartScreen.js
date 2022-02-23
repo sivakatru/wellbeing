@@ -21,7 +21,7 @@ export default function StartScreen({ navigation }) {
       setLoading(false);
     } else {
       try {
-        const response = await fetch("<URL_OF_EXPRESS_APP>/" + number.value);
+        const response = await fetch("http://localhost:5000/consent/" + number.value);
         const json = await response.text();
         navigation.navigate("Dashboard", { param: json });
       } catch (error) {
@@ -35,10 +35,9 @@ export default function StartScreen({ navigation }) {
   return (
     <Background>
       <Logo />
-      <Header>Personal Finance</Header>
+      <Header>Financial Wellbeing</Header>
       <Paragraph>
-        Provide access to your financial data so we can help you manage your
-        budget and finances.
+        Reflect on your habits 
       </Paragraph>
       <TextInput
         label="Mobile number"
@@ -50,7 +49,7 @@ export default function StartScreen({ navigation }) {
         keyboardType="number-pad"
       />
       <Button mode="contained" onPress={getURL}>
-        Provide Access
+        Start evaluating
       </Button>
       {isLoading ? <ActivityIndicator size="large" color="#0000ff" /> : null}
     </Background>
