@@ -3,7 +3,7 @@ import { Provider } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { theme } from "./src/core/theme";
-import { StartScreen, Complete, Dashboard } from "./src/screens";
+import { StartScreen, Complete, Dashboard, Insights } from "./src/screens";
 
 const Stack = createStackNavigator();
 
@@ -12,7 +12,7 @@ export default function App() {
     <Provider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="StartScreen"
+          initialRouteName="Insights"
           screenOptions={{
             headerShown: false,
           }}
@@ -20,6 +20,7 @@ export default function App() {
           <Stack.Screen name="StartScreen" component={StartScreen} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen name="Complete" component={Complete} />
+          <Stack.Screen name="Insights" component={Insights} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
