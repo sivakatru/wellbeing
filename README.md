@@ -7,7 +7,7 @@ Reflect on your habits - learn from the spending patterns, create personalized v
 ![APP-SCREEN](./UX/Main.PNG) ![APP-CHALLENGE](./UX//Challenges.PNG)
 ## Demo Video
 
-[![Watch the video](https://i.ibb.co/cyS87CP/Financial-Wellbeing.png)](https://youtu.be/T-D1KVIuvjA)
+[![Watch the video](https://i.ibb.co/cyS87CP/Financial-Wellbeing.png)](https://youtu.be/vVPHB26kipg)
 
 ## Overview
 
