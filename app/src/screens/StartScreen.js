@@ -21,9 +21,10 @@ export default function StartScreen({ navigation }) {
       setLoading(false);
     } else {
       try {
-        const response = await fetch("http://localhost:5000/consent/" + number.value);
-        const json = await response.text();
-        navigation.navigate("Dashboard", { param: json });
+        // const response = await fetch("http://localhost:5000/consent/" + number.value);
+        // const json = await response.text();
+        // navigation.navigate("Dashboard", { param: json });
+        navigation.navigate("Insights");
       } catch (error) {
         console.error(error);
       } finally {
@@ -37,7 +38,7 @@ export default function StartScreen({ navigation }) {
       <Logo />
       <Header>Financial Wellbeing</Header>
       <Paragraph>
-        Reflect on your habits 
+        Reflect on your habits - learn from the spending patterns, create personalized value-add based on the payment categorization data for users and financial information providers eventually
       </Paragraph>
       <TextInput
         label="Mobile number"
@@ -49,7 +50,7 @@ export default function StartScreen({ navigation }) {
         keyboardType="number-pad"
       />
       <Button mode="contained" onPress={getURL}>
-        Start evaluating
+       Get Onboard
       </Button>
       {isLoading ? <ActivityIndicator size="large" color="#0000ff" /> : null}
     </Background>

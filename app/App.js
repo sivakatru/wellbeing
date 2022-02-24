@@ -1,9 +1,9 @@
 import React from "react";
-import { Provider } from "react-native-paper";
+import { Badge, Provider } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { theme } from "./src/core/theme";
-import { StartScreen, Complete, Dashboard, Insights } from "./src/screens";
+import { StartScreen, Complete, Dashboard, Insights, Challenges, Badges } from "./src/screens";
 
 const Stack = createStackNavigator();
 
@@ -12,7 +12,7 @@ export default function App() {
     <Provider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Insights"
+          initialRouteName="StartScreen"
           screenOptions={{
             headerShown: false,
           }}
@@ -21,6 +21,8 @@ export default function App() {
           <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen name="Complete" component={Complete} />
           <Stack.Screen name="Insights" component={Insights} />
+          <Stack.Screen name="Challenges" component={Challenges} />
+          <Stack.Screen name="Badges" component={Badges} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
